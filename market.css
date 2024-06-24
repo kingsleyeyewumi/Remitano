@@ -1,4 +1,4 @@
-@media (max-width:425px){
+@media (max-width:1440px){
       *{
             margin: 0;
             padding: 0;
@@ -8,7 +8,7 @@
       #marketMainBodyContainer{
             display: grid;
             grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: 5rem 6rem auto;
+            grid-template-rows: 5rem 8rem auto;
             min-height: 100vh;
             /* border: 2px solid black; */
             grid-template-areas: "marketNavBarContainer"
@@ -20,18 +20,20 @@
       .marketNavBarContainer{
             grid-area: marketNavBarContainer;
             /* border: 2px solid blue; */
+            background: white;
             display: grid;
             padding-left: 0.7rem;
             padding-right: 0.7rem;
             position: fixed;
             width: 100%;
-            height: 5rem;
+            min-height: 5rem;
             z-index: 200;
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: auto auto;
             grid-template-areas: "backArrowMarketContainer"
             "searchBarContainer";
       }
+
       /* Backward Arrow & Market Container */
       .backArrowMarketContainer{
             grid-area: backArrowMarketContainer;
@@ -59,6 +61,7 @@
             align-items: center;
             text-decoration: none;
       }
+
       /* Market */
       .marketHolder{
             grid-area: marketHolder;
@@ -76,6 +79,7 @@
             /* border: 2px solid black; */
       }
 
+
       /* Search Bar */
       .searchBarContainer{
             grid-area: searchBarContainer;
@@ -83,6 +87,7 @@
             display: flex;
             flex-direction: row;
             position: relative;
+            margin-top: 1rem;
        }
       /* Search Logo */
       .searchLogoHolder{
@@ -94,7 +99,7 @@
             align-items: center;
             justify-content: center;
             left: 0.7rem;
-            top: 0.5rem;
+            top: 0.3rem;
             z-index: 100;
       }
       /* Search */
@@ -118,6 +123,8 @@
       .globalHomeCountryContainer{
             grid-area: globalHomeCountryContainer;
             border-bottom: 0.01rem solid rgb(124, 65, 147);
+            margin-top: 1rem;
+            padding-bottom: 0.7rem;
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: auto auto;
@@ -179,6 +186,7 @@
             align-items: center;
             color: rgb(73, 68, 68);
             font-weight: bold;
+            font-size: 0.8rem;
             margin-left: 0.8rem;
       }
 
@@ -237,6 +245,7 @@
             align-items: center;
             color: rgb(73, 68, 68);
             font-weight: bold;
+            font-size: 0.8rem;
             margin-left: 0.8rem;
       }
 
@@ -251,12 +260,7 @@
             flex-direction: column;
             margin-top: 1rem;
             position: relative;
-            /* grid-template-columns: repeat(1, 1fr); */
-            /* grid-template-rows: repeat(20, 1fr); */
-            /* grid-template-areas: "afghanistanContainer" */
-            /* "algeriaContainer" */
-            /* "angolaContainer" */
-            /* "argentinaContainer"; */
+            font-size: 0.8rem;
       }
 
       /* Afghanistan start here */
