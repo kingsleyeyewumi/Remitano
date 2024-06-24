@@ -64,7 +64,7 @@
             margin-top: 2rem;
             margin-bottom: 2rem;
             color: rgb(40, 17, 27);
-            font-size: 0.8rem;
+            font-size: 0.7rem;
       }
 
       /* FORM */
@@ -76,6 +76,7 @@
             position: relative;
             border: 1.5px solid rgb(124, 65, 147);
             border-radius: 0.5rem;
+            margin-top: 0.5rem;
       }
       span{
             color: red;
