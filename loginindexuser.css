@@ -1,4 +1,4 @@
-@media (max-width:425px) {
+@media (max-width:1440px) {
       * {
             margin: 0;
             padding: 0;
@@ -20,7 +20,7 @@
       /* Nav Bar starts here */
       .loginIndexUserNavBar {
             grid-area: registerNavBar;
-            border-bottom: 1px solid rgb(124, 65, 147);
+            /* border-bottom: 1px solid rgb(124, 65, 147); */
             display: flex;
             flex-direction: row;
             position: fixed;
@@ -29,7 +29,7 @@
             background-color: white;
             z-index: 100;
             align-items: center;
-            padding-left: 0.5rem;
+            padding-left: 0.7rem;
       }
 
       .loginNavBarBackwardArrowHolder {
@@ -73,6 +73,8 @@
             position: relative;
             /* padding: 0.5rem; */
       }
+
+      /* Welcome To Remitano */
       .welcomeToRemitano{
             display: flex;
             flex-direction: column;
@@ -82,9 +84,15 @@
             /* border: 2px solid blue; */
             justify-content: center;
             align-items: center;
-            margin-top: 1.5rem;
+            margin-top: 2.5rem;
             margin-bottom: 1rem;
             color: rgb(40, 17, 27);
+            font-size: 0.8rem;
+      }
+      .welcomeToRemitano p{
+            margin-top: 0.3rem;
+            margin-bottom: 0.7rem;
+            font-size: 0.88rem;
       }
 
 
@@ -106,10 +114,12 @@
             align-items: center;
             color: white;
             text-decoration: none;
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
+            margin-left: 0.7rem;
+            margin-right: 0.7rem;
+            padding: 0.8rem;
       }
       /* registerNowContainer ends here */
+
 
       /* loginContainer starts here */
       .loginIndexUserLoginContainer{
@@ -117,8 +127,9 @@
             /* border: 2px solid brown; */
             display: flex;
             position: relative;
-            margin-bottom: 0.5rem;
+            margin-bottom: 2rem;
             margin-top: 0.7rem;
+
       }
       .loginIndexUserLoginHolder{
             display: flex;
@@ -131,9 +142,9 @@
             align-items: center;
             color: rgb(124, 65, 147);
             text-decoration: none;
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
-            margin-bottom: 1rem;
+            margin-left: 0.7rem;
+            margin-right: 0.7rem;
+            /* margin-bottom: 1rem; */
       }
       /* loginContainer ends here */
       
@@ -146,7 +157,7 @@
             border-top: 0.01rem solid rgb(124, 65, 147);
             border-bottom: 0.01rem solid rgb(124, 65, 147);
             min-height: 38vh;
-            padding: 0.5rem;
+            padding: 0.7rem;
             gap: 1rem;
             grid-template-areas: "listOfCountriesHolder"
             "listOfLanguageHolder"
@@ -204,6 +215,7 @@
             align-items: center;
             padding-left: 0.3rem;
             font-weight: bold;
+            font-size: 0.8rem;
       }
       /* Country Arrow */
       .countryArrowHolder{
@@ -222,6 +234,7 @@
             align-items: center;
             justify-content: flex-end;
       }
+
 
       /* List of Language Holder start here */
       .listOfLanguageHolder{
@@ -272,6 +285,7 @@
             align-items: center;
             padding-left: 0.3rem;
             font-weight: bold;
+            font-size: 0.8rem;
       }
       /* Language Arrow */
       .LanguageArrowHolder{
@@ -290,6 +304,7 @@
             align-items: center;
             justify-content: flex-end;
       }
+
 
       /* List of currency Holder start here */
       .listOfCurrencyHolder{
@@ -340,6 +355,7 @@
             color: rgb(35, 30, 30);
             align-items: center;
             padding-left: 0.3rem;
+            font-size: 0.8rem;
       }
 
       /* App Version Holder start here */
@@ -391,7 +407,7 @@
             position: relative;
             flex-direction: row;
             color: rgb(35, 30, 30);
-            font-size: 0.8rem;
+            font-size: 0.7rem;
       }
       .versionContainer p{
             background: rgb(251, 19, 19);
@@ -402,7 +418,7 @@
             padding-right: 0.6rem;
             padding-top: 0.1rem;
             padding-bottom: 0.2rem;
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             position: absolute;
             left: 3.2rem;
       }
@@ -412,7 +428,7 @@
             display: flex;
             position: relative;
             color: rgb(35, 30, 30);
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             align-items: flex-end;
       }
 
@@ -459,6 +475,7 @@
             justify-content: center;
             align-items: center;
             font-weight: bold;
+            font-size: 0.7rem;
             color: rgb(67, 51, 51);
       }
 
