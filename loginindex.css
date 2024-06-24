@@ -227,11 +227,11 @@
             color: rgb(20, 30, 20);
       }
       .bitcoinToUsdHolder h2{
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 0.3rem;
       }
       .bitcoinToUsdHolder p{
-            font-size: 0.8rem;
+            font-size: 0.7rem;
       }
       /* bitcoinToUsdContainer ends here */
 
@@ -1126,7 +1126,7 @@
             position: relative;
             justify-content: center;
             align-items: center;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             /* font-weight: bold; */
       }
       .starLogo{
