@@ -1,53 +1,50 @@
-@media (max-width:1440px){
-      *{
+@media (max-width:1440px) {
+      * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
       }
-      /* Login Index Main Body Line 11 html */
-      #loginIndexCoverPage{
+
+      /* Index Main Body Container */
+      #indexMainCoverContainer {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: 3rem auto 3rem;
-            /* border: 4px solid black; */
+            grid-template-rows: 4rem auto 4rem;
             min-height: 100vh;
-            position: relative;
-            /* padding-left: 0.5rem; */
-            /* padding-right: 0.5rem; */
-            grid-template-areas: "loginUpNavBar"
-            "loginMainBody"
-            "loginBottomNavBar";
+            /* border: 2px solid black; */
+            grid-template-areas: "indexNavBar"
+                  "indexBody"
+                  "indexFooter";
       }
-      /* CONTENTS OF #loginIndexCoverPage */
 
-      /* .loginUpNavBar starts here */
-      .loginUpNavBar{
-            grid-area: loginUpNavBar;
-            /* border: 3px solid blue; */
+      /* Nav Bar start here */
+      .indexNavBar {
+            grid-area: indexNavBar;
+            /* border: 2px solid blue; */
             display: grid;
+            padding: 1rem;
             position: fixed;
-            width: 100%;
-            height: 3rem;
             top: 0px;
-            z-index: 1000;
-            background-color: white;
-            padding-left: 0.7rem;
-            padding-right: 0.7rem;
-            grid-template-columns: repeat(2, 1fr);
+            width: 100vw;
+            height: 4rem;
+            z-index: 100;
+            background: white;
+            grid-template-columns: repeat(10, 1fr);
             grid-template-rows: auto;
-            grid-template-areas: "imageIconContainer notificationIconContainer";
+            grid-template-areas: "navBarUserLogoContainer navBarUserLogoContainer navBarUserLogoContainer navBarUserLogoContainer navBarNotificationLogoContainer navBarNotificationLogoContainer navBarNotificationLogoContainer navBarNotificationLogoContainer navBarNotificationLogoContainer navBarMessageLogoContainer";
       }
 
-      /* imageIconContainer */
-      .imageIconContainer{
-            grid-area: imageIconContainer;
+      /* User Logo Container */
+      .navBarUserLogoContainer {
+            grid-area: navBarUserLogoContainer;
             /* border: 2px solid black; */
             display: flex;
             position: relative;
             align-items: center;
       }
-      /* imageIconHolder */
-      .imageIconHolder{
+
+      /* Logo Holder */
+      .userLogoHolder {
             display: flex;
             position: absolute;
             min-width: 1.5rem;
@@ -59,22 +56,24 @@
             padding-top: 0.3rem;
             opacity: 0.6;
       }
-      .imageIconHolder .fa-solid{
+
+      .userLogoHolder .fa-solid {
             color: rgb(39, 21, 21);
             font-size: 1.1rem;
       }
 
-      /* notificationIconContainer */
-      .notificationIconContainer{
-            grid-area: notificationIconContainer;
-            /* border: 2px solid green; */
+      /* Notification Logo Container */
+      .navBarNotificationLogoContainer {
+            grid-area: navBarNotificationLogoContainer;
+            /* border: 2px solid red; */
             display: flex;
             position: relative;
             align-items: center;
             justify-content: flex-end;
       }
-      /* notificationIconHolder */
-      .notificationIconHolder{
+
+      /* Notification Holder */
+      .notificationLogoHolder {
             display: flex;
             position: absolute;
             min-width: 1.5rem;
@@ -84,45 +83,55 @@
             justify-content: center;
             text-decoration: none;
       }
-      .notificationIconHolder .fa-solid{
+
+      .notificationLogoHolder .fa-solid {
             color: rgb(124, 65, 147);
             font-size: 1.2rem;
       }
-      /* .loginUpNavBar ends here */
 
-
-
-      /* .loginMainBody starts here */
-      .loginMainBody{
-            grid-area: loginMainBody;
-            /* border: 3px solid red; */
-            display: grid;
-            padding-left: 0.7rem;
-            padding-right: 0.7rem;
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: auto auto auto;
-            grid-template-areas: "updatesLogoBitcoinRegisterLoginContainer"
-            "coinsChartsPricesContainer"
-            "learnExploreContainer";
+      /* Message Logo Container */
+      .navBarMessageLogoContainer {
+            grid-area: navBarMessageLogoContainer;
+            /* border: 2px solid green; */
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: flex-end;
       }
 
-      /* updatesLogoBitcoinRegisterLoginContainer */
-      .updatesLogoBitcoinRegisterLoginContainer{
-            grid-area: updatesLogoBitcoinRegisterLoginContainer;
-            /* border: 2px solid black; */
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: auto auto auto auto auto;
-            grid-template-areas: "updatesAvailableContainer"
-            "logoContainer"
-            "bitcoinToUsdContainer"
-            "registerNowContainer"
-            "loginContainer";
-            gap: 0.7rem;
+      /* Message Holder */
+      .messageLogoHolder {
+            display: flex;
+            position: absolute;
+            min-width: 1.5rem;
+            min-height: 1.5rem;
+            /* border: 2px solid blue; */
+            border-radius: 50%;
+            justify-content: center;
+            text-decoration: none;
       }
-      
+
+      .messageLogoHolder .fa-regular {
+            color: rgb(124, 65, 147);
+            font-size: 1.2rem;
+      }
+
+
+
+
+      /* Body start here */
+      .indexBody {
+            grid-area: indexBody;
+            /* border: 2px solid gold; */
+            display: flex;
+            flex-direction: column;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            position: relative;
+      }
+
       /* updatesAvailableContainer starts here */
-      .updatesAvailableContainer{
+      .updatesAvailableContainer {
             grid-area: updatesAvailableContainer;
             border: 1px solid rgb(124, 65, 147);
             background: rgb(235, 225, 243);
@@ -136,7 +145,8 @@
             text-decoration: none;
             grid-template-areas: "updatesAvailableIconContainer updatesAvailableWordsContainer updatesAvailableWordsContainer updatesAvailableWordsContainer updatesAvailableWordsContainer updatesAvailableWordsContainer updatesAvailableWordsContainer updatesAvailableWordsContainer updatesAvailableWordsContainer updatesAvailableWordsContainer";
       }
-      .updatesAvailableIconContainer{
+
+      .updatesAvailableIconContainer {
             grid-area: updatesAvailableIconContainer;
             /* border: 2px solid black; */
             display: flex;
@@ -144,7 +154,8 @@
             align-items: center;
             justify-content: center;
       }
-      .updatesAvailableIconHolder{
+
+      .updatesAvailableIconHolder {
             display: flex;
             position: absolute;
             min-height: 1rem;
@@ -158,13 +169,14 @@
             justify-content: center;
       }
 
-      .updatesAvailableWordsContainer{
+      .updatesAvailableWordsContainer {
             grid-area: updatesAvailableWordsContainer;
             /* border: 2px solid blue; */
             display: flex;
             position: relative;
       }
-      .updatesAvailableWordsHolder{
+
+      .updatesAvailableWordsHolder {
             display: flex;
             flex-direction: column;
             position: relative;
@@ -175,127 +187,182 @@
             font-size: 0.6rem;
             justify-content: center;
       }
-      .updatesAvailableWordsHolder h3{
+
+      .updatesAvailableWordsHolder h3 {
             margin-bottom: 0.3rem;
       }
+
       /* updatesAvailableContainer ends here */
 
 
-      /* logoContainer starts here */
-      .logoContainer{
-            grid-area: logoContainer;
+      /* Account Dash-Board start here */
+      .accountDashBoardContainer {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: 2rem 3rem 2.5rem;
+            min-height: 11rem;
+            padding-top: 0.5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin-bottom: 3rem;
+            margin-top: 0.5rem;
+            background: rgb(235, 225, 243);
+            border: 1px solid rgb(124, 65, 147);
+            border-radius: 0.5rem;
+            grid-template-areas: "totalBalance"
+                  "amountInNumbers"
+                  "depositWithdraw";
+      }
+
+      /* Total Balance (USD) */
+      .totalBalance {
+            grid-area: totalBalance;
+            /* border: 1px solid black; */
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto;
+            grid-template-areas: "totalBal";
+      }
+
+      .totalBal {
+            grid-area: totalBal;
+            /* border: 1px solid red; */
+            display: flex;
+            position: relative;
+            font-size: 0.8rem;
+            align-items: center;
+      }
+
+      /* Amount In Numbers */
+      .amountInNumbers {
+            grid-area: amountInNumbers;
+            /* border: 1px solid blue; */
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto auto;
+            grid-template-areas: "numbersContainer"
+                  "amountVolumeContainer";
+      }
+
+      /* Numbers, Eye & Right-Arrow Container */
+      .numbersContainer {
+            grid-area: numbersContainer;
+            /* border: 1px solid red; */
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: auto;
+            grid-template-areas: "number eye arrow arrow arrow arrow";
+      }
+
+      /* Number */
+      .number {
+            grid-area: number;
+            /* border: 2px solid black; */
+            display: flex;
+            font-weight: bold;
+            font-size: 1.5rem;
+      }
+
+      /* Eye */
+      .eye {
+            grid-area: eye;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 0.5rem;
+      }
+
+      .eye .fa-solid {
+            font-size: 1rem;
+            color: rgb(124, 65, 147);
+      }
+
+      /* Arrow */
+      .arrow {
+            grid-area: arrow;
             /* border: 2px solid blue; */
             display: flex;
             position: relative;
-            justify-content: center;
-      }
-      .logoHolder{
-            display: flex;
-            position: relative;
-            min-width: 12rem;
-            min-height: 12rem;
-            /* border: 2px solid gold; */
-            border-radius: 1rem;
-            justify-content: center;
-            align-items: 100%;
-            background-image: url(images/renecR2.webp);
-            background-size: contain;
-            background-repeat: no-repeat;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-      }
-      /* logoContainer ends here */
-
-
-      /* bitcoinToUsdContainer starts here */
-      .bitcoinToUsdContainer{
-            grid-area: bitcoinToUsdContainer;
-            /* border: 2px solid black; */
-            display: flex;
-            position: relative;
-            margin-bottom: 1rem;
-            margin-top: 1rem;
-      }
-      .bitcoinToUsdHolder{
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            min-height: 2.5rem;
-            width: 100%;
-            /* border: 2px solid red; */
+            justify-content: flex-end;
             align-items: center;
-            justify-content: center;
-            color: rgb(20, 30, 20);
       }
-      .bitcoinToUsdHolder h2{
-            font-size: 1.4rem;
-            margin-bottom: 0.3rem;
-      }
-      .bitcoinToUsdHolder p{
-            font-size: 0.7rem;
-            margin-top: 0.3rem;
-      }
-      /* bitcoinToUsdContainer ends here */
 
-
-      /* registerNowContainer starts here */
-      .registerNowContainer{
-            grid-area: registerNowContainer;
-            /* border: 2px solid green; */
+      .arrowHolder {
             display: flex;
-            position: relative;
-      }
-      .registerNowHolder{
-            display: flex;
-            position: relative;
-            min-height: 2.5rem;
-            width: 100%;
-            background: rgb(124, 65, 147);
-            border-radius: 0.44rem;
-            justify-content: center;
-            align-items: center;
-            color: white;
+            min-width: 1rem;
+            min-height: 1rem;
+            /* border: 1px solid black; */
+            border-radius: 50%;
+            position: absolute;
             text-decoration: none;
-            padding: 1rem;
-      }
-      /* registerNowContainer ends here */
-
-
-      /* loginContainer starts here */
-      .loginContainer{
-            grid-area: loginContainer;
-            /* border: 2px solid brown; */
-            display: flex;
-            position: relative;
-            margin-bottom: 0.5rem;
-      }
-      .loginHolder{
-            display: flex;
-            position: relative;
-            min-height: 2.5rem;
-            width: 100%;
-            border: 1px solid rgb(124, 65, 147);
-            border-radius: 0.44rem;
-            justify-content: center;
-            align-items: center;
             color: rgb(124, 65, 147);
-            text-decoration: none;
-            margin-bottom: 3rem;
-            padding: 1rem;
       }
-      /* loginContainer ends here */
+
+      /* Amount Volume Container */
+      .amountVolumeContainer {
+            display: flex;
+            font-size: 1rem;
+            position: relative;
+            top: 0.5rem;
+      }
+
+      /* Deposit & Withdraw */
+      .depositWithdraw {
+            grid-area: depositWithdraw;
+            /* border: 1px solid red; */
+            display: grid;
+            gap: 1rem;
+            position: relative;
+            top: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            grid-template-areas: "deposit withdraw";
+      }
+
+      /* Deposit */
+      .deposit {
+            grid-area: deposit;
+            /* border: 2px solid blue; */
+            border-radius: 0.5rem;
+            display: flex;
+            position: relative;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            background: rgb(124, 65, 147);
+            font-size: 0.8rem;
+            color: white;
+      }
+
+      /* Withdraw */
+      .withdraw {
+            grid-area: withdraw;
+            border: 2px solid rgb(124, 65, 147);
+            background: white;
+            border-radius: 0.5rem;
+            display: flex;
+            position: relative;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: rgb(124, 65, 147);
+      }
+
 
 
       /* coinsChartsPricesContainer starts here */
-      .coinsChartsPricesContainer{
+      .coinsChartsPricesContainer {
             grid-area: coinsChartsPricesContainer;
             /* border: 2px solid blue; */
             display: flex;
             flex-direction: column;
             position: relative;
       }
+
       /* BTC Market starts here */
-      .btcMarketContainer{
+      .btcMarketContainer {
             display: flex;
             flex-direction: row;
             position: relative;
@@ -309,8 +376,9 @@
             padding-top: 0.7rem;
             padding-bottom: 0.7rem;
       }
+
       /* BTC Logo & Name */
-      .btcLogoName{
+      .btcLogoName {
             display: flex;
             flex-direction: row;
             min-width: 30%;
@@ -319,7 +387,8 @@
             position: relative;
             align-items: center;
       }
-      .btcLogoHolder{
+
+      .btcLogoHolder {
             display: flex;
             position: relative;
             min-width: 35%;
@@ -328,7 +397,8 @@
             justify-content: center;
             align-items: center;
       }
-      .btcLogo{
+
+      .btcLogo {
             min-width: 2rem;
             min-height: 2rem;
             /* border: 2px solid red; */
@@ -336,7 +406,8 @@
             background-image: url(images/btcLogo.png);
             background-size: contain;
       }
-      .btcNameHolder{
+
+      .btcNameHolder {
             display: flex;
             position: relative;
             min-width: 65%;
@@ -346,8 +417,9 @@
             padding-left: 0.5rem;
             color: rgb(27, 9, 9);
       }
+
       /* BTC Chart */
-      .btcChart{
+      .btcChart {
             display: flex;
             min-width: 30%;
             min-height: 4rem;
@@ -356,7 +428,8 @@
             justify-content: center;
             align-items: center;
       }
-      .btcChartHolder{
+
+      .btcChartHolder {
             display: flex;
             position: absolute;
             min-width: 100%;
@@ -365,8 +438,9 @@
             justify-content: center;
             align-items: center;
       }
+
       /* BTC Price */
-      .btcPrice{
+      .btcPrice {
             display: flex;
             min-width: 40%;
             min-height: 4rem;
@@ -375,7 +449,8 @@
             justify-content: center;
             align-items: center;
       }
-      .btcPriceHolder{
+
+      .btcPriceHolder {
             display: flex;
             flex-direction: column;
             position: absolute;
@@ -383,7 +458,8 @@
             min-height: 2.5rem;
             /* border: 2px solid blue; */
       }
-      .btcPriceAmount{
+
+      .btcPriceAmount {
             display: flex;
             position: relative;
             width: 100%;
@@ -394,7 +470,8 @@
             font-weight: bold;
             font-size: 1.2rem;
       }
-      .btcPriceVolume{
+
+      .btcPriceVolume {
             display: flex;
             position: relative;
             width: 100%;
@@ -406,11 +483,12 @@
             font-size: 0.9rem;
             margin-top: 0.3rem;
       }
+
       /* BTC Market ends here */
 
 
       /* USDT Market starts here */
-      .usdtMarketContainer{
+      .usdtMarketContainer {
             display: flex;
             flex-direction: row;
             position: relative;
@@ -425,8 +503,9 @@
             padding-top: 0.7rem;
             padding-bottom: 0.7rem;
       }
+
       /* USDT Logo & Name */
-      .usdtLogoName{
+      .usdtLogoName {
             display: flex;
             flex-direction: row;
             min-width: 30%;
@@ -435,7 +514,8 @@
             position: relative;
             align-items: center;
       }
-      .usdtLogoHolder{
+
+      .usdtLogoHolder {
             display: flex;
             position: relative;
             min-width: 35%;
@@ -444,7 +524,8 @@
             justify-content: center;
             align-items: center;
       }
-      .usdtLogo{
+
+      .usdtLogo {
             min-width: 2rem;
             min-height: 2rem;
             /* border: 2px solid red; */
@@ -454,7 +535,8 @@
             background-position: center;
             background-repeat: no-repeat;
       }
-      .usdtNameHolder{
+
+      .usdtNameHolder {
             display: flex;
             position: relative;
             min-width: 65%;
@@ -464,8 +546,9 @@
             padding-left: 0.5rem;
             color: rgb(27, 9, 9);
       }
+
       /* USDT Chart */
-      .usdtChart{
+      .usdtChart {
             display: flex;
             min-width: 30%;
             min-height: 4rem;
@@ -474,7 +557,8 @@
             justify-content: center;
             align-items: center;
       }
-      .usdtChartHolder{
+
+      .usdtChartHolder {
             display: flex;
             position: absolute;
             min-width: 100%;
@@ -483,8 +567,9 @@
             justify-content: center;
             align-items: center;
       }
+
       /* USDT Price */
-      .usdtPrice{
+      .usdtPrice {
             display: flex;
             min-width: 40%;
             min-height: 4rem;
@@ -493,7 +578,8 @@
             justify-content: center;
             align-items: center;
       }
-      .usdtPriceHolder{
+
+      .usdtPriceHolder {
             display: flex;
             flex-direction: column;
             position: absolute;
@@ -501,7 +587,8 @@
             min-height: 2.5rem;
             /* border: 2px solid blue; */
       }
-      .usdtPriceAmount{
+
+      .usdtPriceAmount {
             display: flex;
             position: relative;
             width: 100%;
@@ -512,7 +599,8 @@
             font-weight: bold;
             font-size: 1.2rem;
       }
-      .usdtPriceVolume{
+
+      .usdtPriceVolume {
             display: flex;
             position: relative;
             width: 100%;
@@ -524,19 +612,21 @@
             font-size: 0.9rem;
             margin-top: 0.3rem;
       }
+
       /* USDT Market ends here */
 
 
       /* ETH & BNB Market In Drop-Down starts here */
       /* Drop-Down satrs here */
-      .ethBnbMarketContainer{
+      .ethBnbMarketContainer {
             display: flex;
             flex-direction: column;
             position: relative;
             align-items: center;
       }
+
       /* Button */
-      .ethBnbButton{
+      .ethBnbButton {
             display: flex;
             position: absolute;
             min-width: 1.5rem;
@@ -547,26 +637,32 @@
             justify-content: center;
             align-items: center;
       }
-      .ethBnbButton .fa-solid{
+
+      .ethBnbButton .fa-solid {
             color: rgb(124, 65, 147);
       }
-      .ethBnbMarketContainer .ethMarketContainer{
+
+      .ethBnbMarketContainer .ethMarketContainer {
             display: none;
       }
-      .ethBnbMarketContainer:hover .ethMarketContainer{
+
+      .ethBnbMarketContainer:hover .ethMarketContainer {
             display: flex;
       }
-      .ethBnbMarketContainer .bnbMarketContainer{
+
+      .ethBnbMarketContainer .bnbMarketContainer {
             display: none;
       }
-      .ethBnbMarketContainer:hover .bnbMarketContainer{
+
+      .ethBnbMarketContainer:hover .bnbMarketContainer {
             display: flex;
       }
+
       /* Drop-Down ends here */
 
 
       /* ETH Market starts here */
-      .ethMarketContainer{
+      .ethMarketContainer {
             display: flex;
             flex-direction: row;
             position: relative;
@@ -581,8 +677,9 @@
             padding-top: 0.7rem;
             padding-bottom: 0.7rem;
       }
+
       /* ETH Logo & Name */
-      .ethLogoName{
+      .ethLogoName {
             display: flex;
             flex-direction: row;
             min-width: 30%;
@@ -591,7 +688,8 @@
             position: relative;
             align-items: center;
       }
-      .ethLogoHolder{
+
+      .ethLogoHolder {
             display: flex;
             position: relative;
             min-width: 35%;
@@ -600,7 +698,8 @@
             justify-content: center;
             align-items: center;
       }
-      .ethLogo{
+
+      .ethLogo {
             min-width: 2rem;
             min-height: 2rem;
             /* border: 2px solid red; */
@@ -610,7 +709,8 @@
             background-position: center;
             background-repeat: no-repeat;
       }
-      .ethNameHolder{
+
+      .ethNameHolder {
             display: flex;
             position: relative;
             min-width: 65%;
@@ -620,8 +720,9 @@
             padding-left: 0.5rem;
             color: rgb(27, 9, 9);
       }
+
       /* ETH Chart */
-      .ethChart{
+      .ethChart {
             display: flex;
             min-width: 30%;
             min-height: 4rem;
@@ -630,7 +731,8 @@
             justify-content: center;
             align-items: center;
       }
-      .ethChartHolder{
+
+      .ethChartHolder {
             display: flex;
             position: absolute;
             min-width: 100%;
@@ -639,8 +741,9 @@
             justify-content: center;
             align-items: center;
       }
+
       /* ETH Price */
-      .ethPrice{
+      .ethPrice {
             display: flex;
             min-width: 40%;
             min-height: 4rem;
@@ -649,7 +752,8 @@
             justify-content: center;
             align-items: center;
       }
-      .ethPriceHolder{
+
+      .ethPriceHolder {
             display: flex;
             flex-direction: column;
             position: absolute;
@@ -657,7 +761,8 @@
             min-height: 2.5rem;
             /* border: 2px solid blue; */
       }
-      .ethPriceAmount{
+
+      .ethPriceAmount {
             display: flex;
             position: relative;
             width: 100%;
@@ -668,7 +773,8 @@
             font-weight: bold;
             font-size: 1.2rem;
       }
-      .ethPriceVolume{
+
+      .ethPriceVolume {
             display: flex;
             position: relative;
             width: 100%;
@@ -680,11 +786,12 @@
             font-size: 0.9rem;
             margin-top: 0.3rem;
       }
+
       /* ETH Market ends here */
 
 
       /* BNB Market starts here */
-      .bnbMarketContainer{
+      .bnbMarketContainer {
             display: flex;
             flex-direction: row;
             position: relative;
@@ -699,8 +806,9 @@
             padding-top: 0.7rem;
             padding-bottom: 0.7rem;
       }
+
       /* BNB Logo & Name */
-      .bnbLogoName{
+      .bnbLogoName {
             display: flex;
             flex-direction: row;
             min-width: 30%;
@@ -709,7 +817,8 @@
             position: relative;
             align-items: center;
       }
-      .bnbLogoHolder{
+
+      .bnbLogoHolder {
             display: flex;
             position: relative;
             min-width: 35%;
@@ -718,7 +827,8 @@
             justify-content: center;
             align-items: center;
       }
-      .bnbLogo{
+
+      .bnbLogo {
             min-width: 2rem;
             min-height: 2rem;
             /* border: 2px solid red; */
@@ -728,7 +838,8 @@
             background-position: center;
             background-repeat: no-repeat;
       }
-      .bnbNameHolder{
+
+      .bnbNameHolder {
             display: flex;
             position: relative;
             min-width: 65%;
@@ -738,8 +849,9 @@
             padding-left: 0.5rem;
             color: rgb(27, 9, 9);
       }
+
       /* BNB Chart */
-      .bnbChart{
+      .bnbChart {
             display: flex;
             min-width: 30%;
             min-height: 4rem;
@@ -748,7 +860,8 @@
             justify-content: center;
             align-items: center;
       }
-      .bnbChartHolder{
+
+      .bnbChartHolder {
             display: flex;
             position: absolute;
             min-width: 100%;
@@ -757,8 +870,9 @@
             justify-content: center;
             align-items: center;
       }
+
       /* BNB Price */
-      .bnbPrice{
+      .bnbPrice {
             display: flex;
             min-width: 40%;
             min-height: 4rem;
@@ -767,7 +881,8 @@
             justify-content: center;
             align-items: center;
       }
-      .bnbPriceHolder{
+
+      .bnbPriceHolder {
             display: flex;
             flex-direction: column;
             position: absolute;
@@ -775,7 +890,8 @@
             min-height: 2.5rem;
             /* border: 2px solid blue; */
       }
-      .bnbPriceAmount{
+
+      .bnbPriceAmount {
             display: flex;
             position: relative;
             width: 100%;
@@ -786,7 +902,8 @@
             font-weight: bold;
             font-size: 1.2rem;
       }
-      .bnbPriceVolume{
+
+      .bnbPriceVolume {
             display: flex;
             position: relative;
             width: 100%;
@@ -798,13 +915,15 @@
             font-size: 0.9rem;
             margin-top: 0.3rem;
       }
+
       /* BNB Market ends here */
       /* ETH & BNB Market In Drop-Down ends here */
       /* coinsChartsPricesContainer ends here */
 
 
+
       /* learnExploreContainer starts here */
-      .learnExploreContainer{
+      .learnExploreContainer {
             grid-area: learnExploreContainer;
             /* border: 2px solid green; */
             display: grid;
@@ -813,10 +932,11 @@
             gap: 0.5rem;
             margin-top: 2rem;
             grid-template-areas: "learnExploreHeaderContainer"
-            "learnExploreBodyContainer";
+                  "learnExploreBodyContainer";
       }
+
       /* Learn / Explore HEADER BAR starts here */
-      .learnExploreHeaderContainer{
+      .learnExploreHeaderContainer {
             grid-area: learnExploreHeaderContainer;
             /* border: 2px solid red; */
             display: grid;
@@ -825,17 +945,20 @@
             grid-template-rows: auto;
             grid-template-areas: "learnContainer exploreContainer";
       }
-      .learnContainer{
+
+      .learnContainer {
             grid-area: learnContainer;
             /* border: 2px solid black; */
             display: flex;
             position: relative;
             min-height: 1rem;
             align-items: center;
-            color: rgb(27, 9, 9);;
+            color: rgb(27, 9, 9);
+            ;
             font-weight: bold;
       }
-      .exploreContainer{
+
+      .exploreContainer {
             grid-area: exploreContainer;
             /* border: 2px solid blue; */
             display: flex;
@@ -845,12 +968,14 @@
             justify-content: flex-end;
             color: rgb(124, 65, 147);
       }
-      .exploreContainer a{
+
+      .exploreContainer a {
             text-decoration: none;
       }
+
       /* Learn / Explore HEADER BAR endss here */
       /* Learn / Explore BODY starts here */
-      .learnExploreBodyContainer{
+      .learnExploreBodyContainer {
             grid-area: learnExploreBodyContainer;
             /* border: 2px solid blue; */
             padding-left: 0.5rem;
@@ -860,7 +985,7 @@
       }
 
       /* News Update 1 */
-      .theImpactOfRegulatoryPolicies{
+      .theImpactOfRegulatoryPolicies {
             display: flex;
             flex-direction: row;
             position: relative;
@@ -871,8 +996,9 @@
             border-radius: 0.5rem;
             text-decoration: none;
       }
+
       /* Letters */
-      .theImpactOfRegulatoryPoliciesWords{
+      .theImpactOfRegulatoryPoliciesWords {
             display: flex;
             flex-direction: column;
             min-width: 50%;
@@ -883,12 +1009,14 @@
             color: black;
             font-size: 0.8rem;
       }
-      .theImpactOfRegulatoryPoliciesWords .words{
+
+      .theImpactOfRegulatoryPoliciesWords .words {
             font-weight: bold;
             margin-top: 0.3rem;
       }
+
       /* Image */
-      .theImpactOfRegulatoryPoliciesImages{
+      .theImpactOfRegulatoryPoliciesImages {
             display: flex;
             min-width: 50%;
             min-height: 4rem;
@@ -902,7 +1030,7 @@
       }
 
       /* News Update 2 */
-      .theDollarToNairaBlackMarket{
+      .theDollarToNairaBlackMarket {
             display: flex;
             flex-direction: row;
             position: relative;
@@ -913,8 +1041,9 @@
             border-radius: 0.5rem;
             text-decoration: none;
       }
+
       /* Letters */
-      .theDollarToNairaBlackMarketWords{
+      .theDollarToNairaBlackMarketWords {
             display: flex;
             flex-direction: column;
             min-width: 50%;
@@ -925,12 +1054,14 @@
             color: black;
             font-size: 0.8rem;
       }
-      .theDollarToNairaBlackMarketWords .words{
+
+      .theDollarToNairaBlackMarketWords .words {
             font-weight: bold;
             margin-top: 0.3rem;
       }
+
       /* Image */
-      .theDollarToNairaBlackMarketImages{
+      .theDollarToNairaBlackMarketImages {
             display: flex;
             min-width: 50%;
             min-height: 4rem;
@@ -944,7 +1075,7 @@
       }
 
       /* News Update 3 */
-      .mobileCryptocurrencyManagement{
+      .mobileCryptocurrencyManagement {
             display: flex;
             flex-direction: row;
             position: relative;
@@ -955,8 +1086,9 @@
             border-radius: 0.5rem;
             text-decoration: none;
       }
+
       /* Letters */
-      .mobileCryptocurrencyManagementWords{
+      .mobileCryptocurrencyManagementWords {
             display: flex;
             flex-direction: column;
             min-width: 50%;
@@ -967,12 +1099,14 @@
             color: black;
             font-size: 0.8rem;
       }
-      .mobileCryptocurrencyManagementWords .words{
+
+      .mobileCryptocurrencyManagementWords .words {
             font-weight: bold;
             margin-top: 0.3rem;
       }
+
       /* Image */
-      .mobileCryptocurrencyManagementImages{
+      .mobileCryptocurrencyManagementImages {
             display: flex;
             min-width: 50%;
             min-height: 4rem;
@@ -985,7 +1119,7 @@
       }
 
       /* News Update 4 */
-      .decodingCryptoTheFutureOfBitcoin{
+      .decodingCryptoTheFutureOfBitcoin {
             display: flex;
             flex-direction: row;
             position: relative;
@@ -996,8 +1130,9 @@
             border-radius: 0.5rem;
             text-decoration: none;
       }
+
       /* Letters */
-      .decodingCryptoTheFutureOfBitcoinWords{
+      .decodingCryptoTheFutureOfBitcoinWords {
             display: flex;
             flex-direction: column;
             min-width: 50%;
@@ -1008,12 +1143,14 @@
             color: black;
             font-size: 0.8rem;
       }
-      .decodingCryptoTheFutureOfBitcoinWords .words{
+
+      .decodingCryptoTheFutureOfBitcoinWords .words {
             font-weight: bold;
             margin-top: 0.3rem;
       }
+
       /* Image */
-      .decodingCryptoTheFutureOfBitcoinImages{
+      .decodingCryptoTheFutureOfBitcoinImages {
             display: flex;
             min-width: 50%;
             min-height: 4rem;
@@ -1026,7 +1163,7 @@
       }
 
       /* News Update 5 */
-      .insiderTipsForASecureBitcoin{
+      .insiderTipsForASecureBitcoin {
             display: flex;
             flex-direction: row;
             position: relative;
@@ -1037,8 +1174,9 @@
             border-radius: 0.5rem;
             text-decoration: none;
       }
+
       /* Letters */
-      .insiderTipsForASecureBitcoinWords{
+      .insiderTipsForASecureBitcoinWords {
             display: flex;
             flex-direction: column;
             min-width: 50%;
@@ -1049,12 +1187,14 @@
             color: black;
             font-size: 0.8rem;
       }
-      .insiderTipsForASecureBitcoinWords .words{
+
+      .insiderTipsForASecureBitcoinWords .words {
             font-weight: bold;
             margin-top: 0.3rem;
       }
+
       /* Image */
-      .insiderTipsForASecureBitcoinImages{
+      .insiderTipsForASecureBitcoinImages {
             display: flex;
             min-width: 50%;
             min-height: 4rem;
@@ -1067,7 +1207,7 @@
       }
 
       /* News Updates 6 */
-      .theMultiMillionConversion{
+      .theMultiMillionConversion {
             display: flex;
             flex-direction: row;
             position: relative;
@@ -1078,8 +1218,9 @@
             border-radius: 0.5rem;
             text-decoration: none;
       }
+
       /* Letters */
-      .theMultiMillionConversionWords{
+      .theMultiMillionConversionWords {
             display: flex;
             flex-direction: column;
             min-width: 50%;
@@ -1090,12 +1231,14 @@
             color: black;
             font-size: 0.8rem;
       }
-      .theMultiMillionConversion .words{
+
+      .theMultiMillionConversion .words {
             font-weight: bold;
             margin-top: 0.3rem;
       }
+
       /* Image */
-      .theMultiMillionConversionImages{
+      .theMultiMillionConversionImages {
             display: flex;
             min-width: 50%;
             min-height: 4rem;
@@ -1106,9 +1249,10 @@
             background-size: 100%;
             background-repeat: no-repeat;
       }
+
       /* Learn / Explore BODY ends here */
 
-      .ratedExcellentBy12980Container{
+      .ratedExcellentBy12980Container {
             display: grid;
             grid-template-columns: repeat(10, 1fr);
             grid-template-rows: auto;
@@ -1120,7 +1264,8 @@
             margin-bottom: 1.5rem;
             grid-template-areas: "ratedExcellentBy12980 ratedExcellentBy12980 ratedExcellentBy12980 ratedExcellentBy12980 ratedExcellentBy12980 ratedExcellentBy12980 ratedExcellentBy12980 starLogo trustpilot trustpilot";
       }
-      .ratedExcellentBy12980{
+
+      .ratedExcellentBy12980 {
             grid-area: ratedExcellentBy12980;
             /* border: 2px solid red; */
             display: flex;
@@ -1131,7 +1276,8 @@
             font-size: 0.7rem;
             /* font-weight: bold; */
       }
-      .starLogo{
+
+      .starLogo {
             grid-area: starLogo;
             /* border: 2px solid blue; */
             display: flex;
@@ -1139,7 +1285,8 @@
             align-items: center;
             /* justify-content: center; */
       }
-      .starLogoHolder{
+
+      .starLogoHolder {
             display: flex;
             min-width: 1.5rem;
             min-height: 1.5rem;
@@ -1152,7 +1299,8 @@
             align-items: center;
             bottom: 0.1rem;
       }
-      .trustpilot{
+
+      .trustpilot {
             grid-area: trustpilot;
             /* border: 2px solid black; */
             display: flex;
@@ -1162,15 +1310,17 @@
             font-size: 0.8rem;
             position: relative;
       }
+
       /* learnExploreContainer ends here */
 
       /* .loginMainBody ends here */
 
 
 
-      /* .loginBottomNavBar starts here */
-      .loginBottomNavBar{
-            grid-area: loginBottomNavBar;
+
+      /* Footer start here */
+      .indexFooter {
+            grid-area: indexFooter;
             border-top: 1px solid rgb(124, 65, 147);
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -1184,8 +1334,9 @@
             background: rgb(245, 242, 248);
       }
 
+
       /* Home */
-      .loginHome{
+      .loginHome {
             grid-area: loginHome;
             /* border: 2px solid black; */
             display: flex;
@@ -1195,7 +1346,8 @@
             align-items: center;
             padding-top: 0.5rem;
       }
-      .logoHomeContainer{
+
+      .logoHomeContainer {
             display: flex;
             flex-direction: column;
             position: relative;
@@ -1205,12 +1357,14 @@
             align-items: center;
             text-decoration: none;
       }
-      .logoHomeContainer p{
+
+      .logoHomeContainer p {
             margin-top: 1.3rem;
             font-size: 0.8rem;
             color: black;
       }
-      .loginHomeLogoHolder{
+
+      .loginHomeLogoHolder {
             display: flex;
             min-width: 1.3rem;
             min-height: 1.3rem;
@@ -1222,7 +1376,7 @@
       }
 
       /* History */
-      .loginHistory{
+      .loginHistory {
             grid-area: loginHistory;
             /* border:  2px solid red; */
             display: flex;
@@ -1232,7 +1386,8 @@
             align-items: center;
             padding-top: 0.5rem;
       }
-      .loginHistoryContainer{
+
+      .loginHistoryContainer {
             display: flex;
             flex-direction: column;
             position: relative;
@@ -1242,12 +1397,14 @@
             align-items: center;
             text-decoration: none;
       }
-      .loginHistoryContainer p{
+
+      .loginHistoryContainer p {
             margin-top: 1.3rem;
             font-size: 0.8rem;
             color: black;
       }
-      .loginHistoryLogoHolder{
+
+      .loginHistoryLogoHolder {
             display: flex;
             min-width: 1.3rem;
             min-height: 1.3rem;
@@ -1259,7 +1416,7 @@
       }
 
       /* Trades */
-      .loginTrades{
+      .loginTrades {
             grid-area: loginTrades;
             /* border: 2px solid green; */
             display: flex;
@@ -1268,7 +1425,8 @@
             justify-content: center;
             align-items: center;
       }
-      .loginTradesContainer{
+
+      .loginTradesContainer {
             display: flex;
             flex-direction: column;
             position: absolute;
@@ -1279,12 +1437,14 @@
             text-decoration: none;
             bottom: 0.5rem;
       }
-      .loginTradesContainer p{
+
+      .loginTradesContainer p {
             margin-top: 2.2rem;
             font-size: 0.8rem;
             color: black;
       }
-      .loginTradesLogoHolder{
+
+      .loginTradesLogoHolder {
             display: flex;
             min-width: 2.2rem;
             min-height: 2.2rem;
@@ -1295,12 +1455,13 @@
             justify-content: center;
             align-items: center;
       }
-      .loginTradesLogoHolder .fa-solid{
+
+      .loginTradesLogoHolder .fa-solid {
             color: white;
       }
 
       /* Wallet */
-      .loginWallet{
+      .loginWallet {
             grid-area: loginWallet;
             /* border: 2px solid gold; */
             display: flex;
@@ -1310,7 +1471,8 @@
             align-items: center;
             padding-top: 0.5rem;
       }
-      .loginWalletContainer{
+
+      .loginWalletContainer {
             display: flex;
             flex-direction: column;
             position: relative;
@@ -1320,12 +1482,14 @@
             align-items: center;
             text-decoration: none;
       }
-      .loginWalletContainer p{
+
+      .loginWalletContainer p {
             margin-top: 1.3rem;
             font-size: 0.8rem;
             color: black;
       }
-      .loginWalletLogoHolder{
+
+      .loginWalletLogoHolder {
             display: flex;
             min-width: 1.3rem;
             min-height: 1.3rem;
@@ -1337,7 +1501,7 @@
       }
 
       /* More */
-      .loginMore{
+      .loginMore {
             grid-area: loginMore;
             /* border: 2px solid grey; */
             display: flex;
@@ -1347,7 +1511,8 @@
             align-items: center;
             padding-top: 0.5rem;
       }
-      .loginMoreContainer{
+
+      .loginMoreContainer {
             display: flex;
             flex-direction: column;
             position: relative;
@@ -1357,12 +1522,14 @@
             align-items: center;
             text-decoration: none;
       }
-      .loginMoreContainer p{
+
+      .loginMoreContainer p {
             margin-top: 1.3rem;
             font-size: 0.8rem;
             color: black;
       }
-      .loginMoreLogoHolder{
+
+      .loginMoreLogoHolder {
             display: flex;
             min-width: 1.3rem;
             min-height: 1.3rem;
@@ -1372,5 +1539,6 @@
             justify-content: center;
             align-items: center;
       }
+
       /* .loginBottomNavBar ends here */
 }
