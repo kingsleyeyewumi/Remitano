@@ -120,6 +120,7 @@
             "loginContainer";
             gap: 0.7rem;
       }
+      
       /* updatesAvailableContainer starts here */
       .updatesAvailableContainer{
             grid-area: updatesAvailableContainer;
