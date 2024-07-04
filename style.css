@@ -209,7 +209,7 @@
             display: grid;
             grid-template-columns: repeat(8, 1fr);
             grid-template-rows: auto;
-            grid-template-areas: "totalBal totalBal usd usd usd usd usd usd";
+            grid-template-areas: "totalBal totalBal totalBal usd usd usd usd usd";
       }
       .totalBal{
             grid-area: totalBal;
