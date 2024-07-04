@@ -189,11 +189,12 @@
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: 2rem 3rem 2.5rem;
-            min-height: 9.5rem;
+            min-height: 11rem;
             padding-top: 0.5rem;
             padding-left: 1rem;
             padding-right: 1rem;
             margin-bottom: 3rem;
+            margin-top: 0.5rem;
             background: rgb(235, 225, 243);
             border: 1px solid rgb(124, 65, 147);
             border-radius: 0.5rem;
@@ -207,9 +208,9 @@
             grid-area: totalBalance;
             /* border: 1px solid black; */
             display: grid;
-            grid-template-columns: repeat(8, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             grid-template-rows: auto;
-            grid-template-areas: "totalBal totalBal totalBal usd usd usd usd usd";
+            grid-template-areas: "totalBal";
       }
       .totalBal{
             grid-area: totalBal;
@@ -217,13 +218,6 @@
             display: flex;
             position: relative;
             font-size: 0.8rem;
-            align-items: center;
-      }
-      .usd{
-            grid-area: usd;
-            /* border: 1px solid blue; */
-            display: flex;
-            position: relative;
             align-items: center;
       }
 
@@ -252,6 +246,7 @@
             /* border: 2px solid black; */
             display: flex;
             font-weight: bold;
+            font-size: 1.5rem;
       }
 
       /* Eye */
@@ -260,10 +255,11 @@
             /* border: 2px solid red; */
             display: flex;
             justify-content: flex-start;
+            align-items: center;
             padding-left: 0.5rem;
       }
       .eye .fa-solid{
-            font-size: 0.8rem;
+            font-size: 1rem;
       }
 
       /* Arrow */
@@ -289,7 +285,9 @@
       /* Amount Volume Container */
       .amountVolumeContainer{
             display: flex;
-            font-size: 0.8rem;
+            font-size: 1rem;
+            position: relative;
+            top: 0.5rem;
       }
 
       /* Deposit & Withdraw */
@@ -299,7 +297,7 @@
             display: grid;
             gap: 1rem;
             position: relative;
-            top: 0.5rem;
+            top: 2rem;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
             grid-template-areas: "deposit withdraw";
